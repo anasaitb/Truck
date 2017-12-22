@@ -1,0 +1,16 @@
+{{#ui-modal}}
+  <div class="ui button">Create Team</div>
+  <div class="ui basic modal">
+    <i class="close icon"></i>
+    <div class="ui header">
+      Create team
+    </div>
+    <div class="ui content">
+      <label>Name: </label>
+      {{input type="text" value=teamName placeholder="Enter team name" class="ui input"}}
+    </div>
+    <div class="ui green basic button" {{action 'createTeam'}}>Create !</div>
+  </div>
+{{/ui-modal}}
+
+{{yield}}

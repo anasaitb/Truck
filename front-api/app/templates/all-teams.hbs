@@ -1,0 +1,13 @@
+TEAMS :<br>
+
+{{#each model.teams as |team|}}
+  {{team.name}} -
+  {{#each team.players as |user|}}
+    {{user.name}},
+  {{/each}}
+  {{add-player action="addPlayer" team=team users=model.users}}<br>
+{{/each}}
+<br><br>
+{{create-team action="createTeam"}}
+
+{{outlet}}

@@ -1,0 +1,26 @@
+{{#ui-modal}}
+  <div class="ui button">Add Player</div>
+  <div class="ui basic modal">
+    <i class="close icon"></i>
+    <div class="ui header">
+      {{team.name}}
+    </div>
+    <div class="ui content">
+      <label>Player: </label>
+      {{#ui-dropdown class="selection" selected=player}}
+        <div class="default text">Choose a player</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          {{#each users as |user|}}
+            <div class="item" data-value="{{user.id}}">
+              {{user.name}}
+            </div>
+          {{/each}}
+        </div>
+      {{/ui-dropdown}}
+    </div>
+    <div class="ui green basic button" {{action 'addUser'}}>Add !</div>
+  </div>
+{{/ui-modal}}
+
+{{yield}}

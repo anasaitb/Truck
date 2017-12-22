@@ -1,0 +1,18 @@
+<div class="ui menu inverted">
+  {{#link-to 'login'}}
+    <a class="item">login</a>
+  {{/link-to}}
+  {{#link-to 'dashboard'}}
+    <a class="item">Map</a>
+  {{/link-to}}
+  {{#link-to 'all-teams'}}
+    <a class="item">Teams</a>
+  {{/link-to}}
+  <div class="right menu">
+
+    {{#link-to 'login'}}
+      <a class="item">Log out</a>
+    {{/link-to}}
+  </div>
+</div>
+{{outlet}}

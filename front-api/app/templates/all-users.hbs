@@ -1,0 +1,8 @@
+USERS :<br>
+
+{{#each model as |user|}}
+  {{user.name}} - {{#each user.teams as |team|}}{{team.name}}, {{/each}}<br>
+{{/each}}
+<br><br>
+{{create-user action="createUser"}}
+{{outlet}}
